@@ -1,0 +1,1 @@
+{"version":3,"file":"questionPoll.js","sourceRoot":"","sources":["../../../server/models/questionPoll.ts"],"names":[],"mappings":";;AAAA,mCAAqC;AAErC,IAAM,gBAAgB,GAAG,IAAI,QAAQ,CAAC,MAAM,CAAC;IAC3C,KAAK,EAAE,MAAM;IACb,QAAQ,EAAE,MAAM;IAChB,SAAS,EAAE,MAAM;CAClB,CAAC,CAAC;AAEH,IAAM,UAAU,GAAG,QAAQ,CAAC,KAAK,CAAC,YAAY,EAAE,gBAAgB,CAAC,CAAC;AAElE,kBAAe,UAAU,CAAC"}
