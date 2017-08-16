@@ -16,6 +16,9 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import {RadioButtonModule} from 'primeng/primeng';
+import { DashboardQuestionComponent } from './dashboard-question/dashboard-question.component';
+import { PollservicesService } from './services/pollservices.service';
 
 @NgModule({
   declarations: [
@@ -27,18 +30,21 @@ import { NotFoundComponent } from './not-found/not-found.component';
     LogoutComponent,
     AccountComponent,
     AdminComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DashboardQuestionComponent
   ],
   imports: [
     RoutingModule,
-    SharedModule
+    SharedModule,
+    RadioButtonModule
   ],
   providers: [
     AuthService,
     AuthGuardLogin,
     AuthGuardAdmin,
     CatService,
-    UserService
+    UserService,
+    PollservicesService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

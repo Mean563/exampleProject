@@ -12,7 +12,23 @@
         <span class="input-group-addon"><i class="fa fa-key"></i></span>
         <input class="form-control" type="password" name="password" formControlName="password" placeholder="Password">
       </div>
+      <!--<p-radioButton name="groupname" value="val1" label="Option 2"></p-radioButton>
+         <p-radioButton name="groupname" value="val1" label="Option 2"></p-radioButton>
+            <p-radioButton name="groupname" value="val1" label="Option 2"></p-radioButton>
+               <p-radioButton name="groupname" value="val1" label="Option 2"></p-radioButton>-->
+
+
+    <div class="ui-g-12"><p-radioButton name="group1" value="Option 1" label="Option 1" formControlName="groupname"></p-radioButton></div>
+    <div class="ui-g-12"><p-radioButton name="group1" value="Option 2" label="Option 2" formControlName="groupname"></p-radioButton></div>
+    <div class="ui-g-12"><p-radioButton name="group1" value="Option 3" label="Option 3" formControlName="groupname"></p-radioButton></div>
+        
+
       <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid"><i class="fa fa-sign-in"></i> Login</button>
     </form>
   </div>
 </div>
+
+Selected Value = {{val1||'none'}}
+
+{{email}}
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import {RadioButtonModule} from 'primeng/primeng';
 
 import { AuthService } from '../services/auth.service';
 import { ToastComponent } from '../shared/toast/toast.component';
@@ -11,6 +12,8 @@ import { ToastComponent } from '../shared/toast/toast.component';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+    selectedValue: string;
+
 
   loginForm: FormGroup;
   email = new FormControl('', [Validators.required,
@@ -18,6 +21,8 @@ export class LoginComponent implements OnInit {
                                        Validators.maxLength(100)]);
   password = new FormControl('', [Validators.required,
                                           Validators.minLength(6)]);
+
+  groupname = new FormControl('',[]);
 
   constructor(private auth: AuthService,
               private formBuilder: FormBuilder,
@@ -30,7 +35,8 @@ export class LoginComponent implements OnInit {
     }
     this.loginForm = this.formBuilder.group({
       email: this.email,
-      password: this.password
+      password: this.password,
+      groupname:this.groupname
     });
   }
 

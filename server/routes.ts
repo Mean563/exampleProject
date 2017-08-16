@@ -4,6 +4,8 @@ import CatCtrl from './controllers/cat';
 import UserCtrl from './controllers/user';
 import Cat from './models/cat';
 import User from './models/user';
+import Answerpoll from './models/questionPoll';
+import AnswerpollCtrl from './controllers/questionPollCtrl';
 
 export default function setRoutes(app) {
 
@@ -11,6 +13,7 @@ export default function setRoutes(app) {
 
   const catCtrl = new CatCtrl();
   const userCtrl = new UserCtrl();
+  const answerpollCtrl = new AnswerpollCtrl(); 
 
   // Cats
   router.route('/cats').get(catCtrl.getAll);
@@ -28,6 +31,10 @@ export default function setRoutes(app) {
   router.route('/user/:id').get(userCtrl.get);
   router.route('/user/:id').put(userCtrl.update);
   router.route('/user/:id').delete(userCtrl.delete);
+
+  // Answer Poll Question
+
+  router.route('/postAnswer').post(answerpollCtrl.insert);
 
   // Apply the routes to our application with the prefix /api
   app.use('/api', router);
